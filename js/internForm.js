@@ -3,5 +3,11 @@
 */
 
 $(document).ready(function() {
-	console.log("Ready!");
+
+	$('#internForm').submit(function() {
+      console.log("Submitted");
+      $(".submit-button").attr("value","Submitting...");
+      return false;
+   });
 });
+
