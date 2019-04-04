@@ -34,27 +34,33 @@
 	<div id="internFormOpen">
 		<p>Prepare for your career with a Project Management, Web-Development, Graphic design, or Digital Marketing Internship at Northern.</p>
 
-		<form method="post" id="internForm" action="">
+		<form id="internForm">
 
+			<!-- Email input -->
 			<input class="email-input" type="email" name="email" placeholder="Your Email Address *" required>
 
+			<!-- Interests input -->
 			<select class="select-interest" name="interests" autocomplete="off">
 				<option class="selectPlaceholder" value="" selected disabled>Your Interests</option>
 				<option value="videoGames">Video Games</option>
 				<option value="running">Running</option>
+				<option value="videoGames">Development</option>
 				<option value="drawing">Drawing</option>
 				<option value="socialMedia">Social Media</option>
 			</select>
 			<br>
 
+			<!-- Submit button -->
 			<input class="submit-button" type="submit" value="Sign Up Now &#x25B8;">
 		</form>
 	</div>
 
-	<div id="internFormSubmitted">
+	<!-- "Thanks message" -->
+	<div id="internFormSubmitted">	<!-- Is initially hidden by CSS -->
 		<h2>Thanks for your interest!</h2>
 		<br>
 
 		<p>We will review your application and contact you for additional information should your background and experience meet the requirments of one of our openings.</p>
 	</div>
 </body>
+</html>

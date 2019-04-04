@@ -3,26 +3,34 @@
 */
 
 $(document).ready(function() {
-	// Called when the intern form is submitted
-	$('#internForm').submit(function() {
+  console.log("%c\nTo view the code, please visit: https://github.com/Keyyva/NorthernCodeChallenge\n ", "color: #307d3e");
 
-      $(".submit-button").attr("value","Submitting...");
+  // Called when the intern form is submitted
+  $('#internForm').submit(function() {
 
-      setTimeout(function(){
-      	$("#internFormOpen").fadeOut( "slow", function() {	// Fadeout the form and fadein the "thanks message"
-    		$("#internFormSubmitted").fadeIn("slow");
+    $(".submit-button").attr("value","Submitting...");
 
-      		var formData = $( "#internForm" ).serializeArray();
+    setTimeout(function(){
+      $("#internFormOpen").fadeOut( "slow", function() {	// Fadeout the form and fadein the "thanks message"
 
-      		// Output form data to the console
-      		console.log("*** FORM DATA ***");
-      		formData.forEach(function(element) {
-  				console.log(element.name + ": " + element.value);
-			});
-  		});
-      }, 2000);
+        $("#internFormSubmitted").fadeIn("slow");
 
-      event.preventDefault();
-   });
+        var formData = $( "#internForm" ).serializeArray();
+
+        // Output form data to the console
+        console.log("*** FORM DATA ***");
+        formData.forEach(function(element) {
+          
+          console.log(element.name + ": " + element.value);
+        });
+      });
+    }, 2000);
+
+    event.preventDefault();
+  });
+
+  // Changes the colour of the select options to give an illusion of a placeholder
+  $(".select-interest").change(function(){
+    $(this).css("color", "#000000");
+  });
 });
-
