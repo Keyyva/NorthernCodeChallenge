@@ -3,11 +3,26 @@
 */
 
 $(document).ready(function() {
-
+	// Called when the intern form is submitted
 	$('#internForm').submit(function() {
-      console.log("Submitted");
+
       $(".submit-button").attr("value","Submitting...");
-      return false;
+
+      setTimeout(function(){
+      	$("#internFormOpen").fadeOut( "slow", function() {	// Fadeout the form and fadein the "thanks message"
+    		$("#internFormSubmitted").fadeIn("slow");
+
+      		var formData = $( "#internForm" ).serializeArray();
+
+      		// Output form data to the console
+      		console.log("*** FORM DATA ***");
+      		formData.forEach(function(element) {
+  				console.log(element.name + ": " + element.value);
+			});
+  		});
+      }, 2000);
+
+      event.preventDefault();
    });
 });
 
