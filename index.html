@@ -14,7 +14,8 @@
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Font -->
-
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet"> 
 
 	<!-- Styles -->
 	<link rel="stylesheet" href="css/style.css">
@@ -26,5 +27,27 @@
 </head>
 
 <body>
-	<h1>Hello World!</h1>
+	<h1>INTERNSHIP SIGNUP FORM</h1>
+
+	<hr>
+
+	<div id="internFormOpen">
+		<p>Prepare for your career with a Project Management, Web-Development, Graphic design, or Digital Marketing Internship at Northern.</p>
+
+		<form id="internForm" onsubmit="return false">
+
+			<input class="email-input" type="email" name="email" placeholder="Your Email Address *" required>
+
+			<select class="select-interest" name="interests" autocomplete="off">
+				<option class="selectPlaceholder" value="" selected disabled>Your Interests</option>
+				<option value="videoGames">Video Games</option>
+				<option value="running">Running</option>
+				<option value="drawing">Drawing</option>
+				<option value="socialMedia">Social Media</option>
+			</select>
+			<br>
+
+			<input class="submit-button" type="submit" value="Sign Up Now &#x25B8;">
+		</form>
+	</div>
 </body>
